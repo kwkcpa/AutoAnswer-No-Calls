@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#1A1A2E"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/textCallState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incoming Call"
+        android:textSize="18sp"
+        android:textColor="#AAAAAA"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textCallerNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unknown"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="64dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Reject button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReject"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="Reject"
+            android:textSize="12sp"
+            app:cornerRadius="40dp"
+            android:backgroundTint="#F44336"
+            android:layout_margin="16dp" />
+
+        <!-- Answer button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnswer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="Answer"
+            android:textSize="12sp"
+            app:cornerRadius="40dp"
+            android:backgroundTint="#4CAF50"
+            android:layout_margin="16dp" />
+    </LinearLayout>
+
+    <!-- Hangup button (shown during active call) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHangup"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="End"
+        android:textSize="12sp"
+        app:cornerRadius="40dp"
+        android:backgroundTint="#F44336"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+</LinearLayout>
